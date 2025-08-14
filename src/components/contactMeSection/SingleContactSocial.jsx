@@ -14,3 +14,4 @@ const SingleContactSocial = ({ Icon, link, hoverColor = "text-slate-200" }) => {
     </a>
   );
 };
+export default SingleContactSocial;
