@@ -18,11 +18,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     setStatus("Sending...");
-    
-    console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
-console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
-console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
-
+   
 
     emailjs
       .send(
