@@ -6,20 +6,30 @@ import { useSelector } from "react-redux";
 
 const NavbarMain = () => {
   const menuOpen = useSelector((state) => state.menu.menuOpen);
-  return (
-    <nav className="max-w-[1300px] mx-auto w-full  px-4 fixed left-[50%] -translate-x-[50%] z-20 flex gap-4 mt-2">
- <div className="flex justify-between w-full max-w-[1200px] mx-auto bg-slate-200/20 backdrop-blur-sm items-center p-6 rounded-r-full rounded-l-full border-orange border-[0.5px]">
 
+  return (
+    <nav className="w-full fixed top-0 left-0 z-20">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4
+        bg-slate-200/20 backdrop-blur-sm border-orange border-[0.5px]
+        rounded-full mt-2"
+      >
+        {/* Logo */}
         <NavbarLogo />
+
+        {/* Links (responsive) */}
         <div className={`${menuOpen ? "sm:block" : "sm:hidden"} lg:block`}>
           <NavbarLinks />
         </div>
 
-        <NavbarBtn />
-      </div>
-    <div className="flex lg:hidden sm:block p-6 bg-slate-200/20 backdrop-blur-sm items-center justify-center rounded-full border-orange border-[0.5px]">
+        {/* Button always visible */}
+        <div className="hidden sm:hidden lg:block">
+          <NavbarBtn />
+        </div>
 
-        <NavbarToggler />
+        {/* Hamburger for small screens */}
+        <div className="lg:hidden sm:block">
+          <NavbarToggler />
+        </div>
       </div>
     </nav>
   );

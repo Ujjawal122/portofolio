@@ -10,13 +10,17 @@ const links = [
 
 const NavbarLinks = () => {
   return (
-    <ul className="flex lg:flex-row sm:flex-col gap-6 text-white font-body 
-lg:relative sm:absolute sm:top-[120%] text-center left-[50%] -translate-x-[50%] 
-lg:text-md sm:text-xl 
-sm:bg-slate-200/20  ````````````````````````````````````````````````````````````````````````
-backdrop-blur-sm 
-sm:rounded-xl sm:shadow-lg sm:shadow-slate-500/20 
-sm:w-full py-4 px-6">
+    <ul
+      className="
+        flex lg:flex-row sm:flex-col gap-6 text-white font-body
+        lg:relative sm:absolute sm:top-[100%] sm:left-0 sm:right-0
+        lg:text-md sm:text-lg
+        sm:bg-slate-900/90 sm:backdrop-blur-md
+        sm:rounded-xl sm:shadow-lg sm:shadow-slate-500/20
+        sm:w-[90%] sm:mx-auto py-4 px-6 sm:mt-4
+        transition-all duration-500
+      "
+    >
       {links.map((link, index) => {
         return (
           <li key={index} className="group">

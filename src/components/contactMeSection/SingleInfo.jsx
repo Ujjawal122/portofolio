@@ -1,9 +1,8 @@
-// SingleInfo.jsx
 const SingleInfo = ({ text, Icon }) => {
   return (
-    <div className="flex gap-4 items-center justify-start">
-      {Icon ? <Icon className="text-3xl" /> : null}
-      <p>{text}</p>
+    <div className="flex gap-3 items-center">
+      {Icon && <Icon className="text-xl md:text-2xl text-sky-400" />}
+      <p className="text-sm md:text-base">{text}</p>
     </div>
   );
 };

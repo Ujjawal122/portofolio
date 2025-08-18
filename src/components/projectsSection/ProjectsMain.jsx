@@ -10,28 +10,28 @@ const projects = [
     year: "2024",
     align: "right",
     link: "https://github.com/Ujjawal122/data_cleaning_in_titanic",
-    image:"/images/data_cleaning.jpg"
+    image: "/images/data_cleaning.jpg",
   },
   {
     name: "Galaxy Word",
     year: "2024",
     align: "left",
     link: "https://github.com/Ujjawal122/galaxy_word",
-    image:"/images/galxay.png"
+    image: "/images/galxay.png",
   },
   {
     name: "Guessing Number",
     year: "2024",
     align: "right",
     link: "https://github.com/Ujjawal122/Guessing_Number",
-    image:"/images/guessing.jpg"
+    image: "/images/guessing.jpg",
   },
   {
     name: "BMI Generator",
     year: "2024",
     align: "left",
     link: "https://github.com/Ujjawal122/BMI-Genertor",
-    image:"images/bmi.jpg"
+    image: "/images/bmi.jpg", // fixed missing leading slash
   },
 ];
 
@@ -49,16 +49,9 @@ const ProjectsMain = () => {
       </motion.div>
 
       {/* Projects List */}
-      <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
+      <div className="flex flex-col gap-20 mt-12">
         {projects.map((project, index) => (
-          <SingleProject
-            key={index}
-            name={project.name}
-            year={project.year}
-            align={project.align}
-            link={project.link}
-            image={project.image}
-          />
+          <SingleProject key={index} {...project} />
         ))}
       </div>
     </div>

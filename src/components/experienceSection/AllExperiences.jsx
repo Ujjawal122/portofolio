@@ -1,4 +1,3 @@
-// AllExperiences.jsx
 import React from "react";
 import SingleExperience from "./SingleExperience.jsx";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -38,10 +37,9 @@ const experiences = [
   },
 ];
 
-
 const AllExperiences = () => {
   return (
-    <div className="flex md:flex-row sm:flex-col items-center justify-between">
+    <div className="flex flex-wrap md:flex-row sm:flex-col items-center justify-center gap-6 mt-12">
       {experiences.map((experience, index) => {
         const key = `${experience.job}-${experience.company}-${experience.date}`;
         const isLast = index === experiences.length - 1;
@@ -55,8 +53,9 @@ const AllExperiences = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.7 }}
+                className="hidden lg:block"
               >
-                <FaArrowRightLong className="text-6xl text-orange lg:block sm:hidden" />
+                <FaArrowRightLong className="text-5xl text-orange" />
               </motion.div>
             )}
           </React.Fragment>
