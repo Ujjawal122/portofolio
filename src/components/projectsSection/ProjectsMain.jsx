@@ -20,19 +20,20 @@ const projects = [
     image: "/images/galxay.png",
   },
   {
-    name: "Guessing Number",
+    name: "Job Portal",
     year: "2024",
     align: "right",
-    link: "https://github.com/Ujjawal122/Guessing_Number",
-    image: "/images/guessing.jpg",
+    link: "https://github.com/Ujjawal122/Job-portal",
+    image: "/images/job.png",
   },
   {
-    name: "BMI Generator",
-    year: "2024",
+    name: "AI Travel Planer",
+    year: "2025",
     align: "left",
-    link: "https://github.com/Ujjawal122/BMI-Genertor",
-    image: "/images/bmi.jpg", // fixed missing leading slash
+    link: "https://github.com/Ujjawal122/AI_travel-planer",
+    image: "/images/ai-travel.png", // fixed missing leading slash
   },
+
 ];
 
 const ProjectsMain = () => {
